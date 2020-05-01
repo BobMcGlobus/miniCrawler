@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ERROR | E_WARNING | E_PARSE); //hehe xd
 unset($argv[0]);    // remove first argument (crawler.php)
-$start = $argv[1]; // This is the starting url (passed by php commandline
+$start = $argv[1]; // This is the starting url (passed by php commandline)
 if (!$start){
     echo("Tja das wars jetzt komplett...");
 }
@@ -75,7 +75,7 @@ function get_details($url) {
     $title = $doc->getElementsByTagName("title");   // Array for page titles.
     $title = $title->item(0)->nodeValue;
 
-    return("Titel: ".$title . "\nURL: " . $url . "\nBeschreibung: " . $description . "\nKeywords: " . $keywords . "\n\n");
+    return("Titel: ".$title . "\nURL: " . $url . "\nBeschreibung: " . $description . "\nKeywords: " . $keywords . "\n");
 }
 
 follow_links($start);   // Start crawling.
